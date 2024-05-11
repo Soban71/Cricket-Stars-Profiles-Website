@@ -1,0 +1,67 @@
+/* About.css */
+
+/* Style for the Blog Section */
+#Blog-section {
+    margin: 2rem 0;
+}
+
+/* Style for each blog post */
+.row.blogbox {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd; /* Separator between blog posts */
+    padding-bottom: 2rem;
+}
+
+/* Style for the image column */
+.row.blogbox .image {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+/* Style for images */
+.row.blogbox .image img {
+    width: 500px;
+    height: 300px;
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Style for the blog details column */
+.row.blogbox .blog-detail {
+    flex: 1;
+    font-family: 'Arial', sans-serif; /* Font family for text */
+}
+
+/* Style for the blog title */
+.row.blogbox .blog-detail h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333; /* Dark text color */
+}
+
+/* Style for the blog description */
+.row.blogbox .blog-detail p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666; /* Gray text color */
+}
+
+/* Style for the continue reading link */
+.row.blogbox .blog-detail a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff; /* White text color */
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the continue reading link */
+.row.blogbox .blog-detail a:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+}

@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:W7301%40jqir%23@localhost:3306/dever"// env("DATABASE_URL")
+  
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  password String
+  role     String
+  Rating   Rating[]
+}
+
+model CricketerInfo {
+  id                   Int       @id @default(autoincrement())
+  
+  playerName           String?
+  country              String?
+  role                 String?
+  matches              Int?
+  runs                 Int?
+  wickets              Int?
+  Rating               Rating[]
+}
+
+model Rating {
+  id        Int           @id @default(autoincrement())
+  player    CricketerInfo @relation(fields: [playerId], references: [id])
+  playerId  Int
+  user      User          @relation(fields: [userId], references: [id])
+  userId    Int
+  rating    Int           @default(0)
+  review    String
+  createdAt DateTime      @default(now())
+}

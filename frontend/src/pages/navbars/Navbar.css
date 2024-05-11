@@ -1,0 +1,79 @@
+/* Navbar.css */
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom Navbar Container */
+.custom-navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+/* Custom Logo */
+.custom-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Custom Nav Links */
+.custom-nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.custom-nav-links.open {
+    display: flex;
+}
+
+/* Custom Nav Link */
+.custom-nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-nav-link:hover {
+    color: #1e90ff;
+}
+
+/* Custom Menu Button */
+.custom-menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Custom Menu Icon */
+.custom-menu-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show Custom Nav Links on larger screens */
+@media (min-width: 768px) {
+    .custom-nav-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .custom-menu-button {
+        display: none;
+    }
+}
